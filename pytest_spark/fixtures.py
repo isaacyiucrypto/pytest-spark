@@ -54,7 +54,7 @@ def spark_context(_spark_session):
         sc.stop()  # pyspark 1.x: stop SparkContext instance
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture(scope='session', name='spark')
 def spark_session(_spark_session):
     """Return a Hive enabled SparkSession instance with reduced logging
     (session scope).
